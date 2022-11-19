@@ -1,0 +1,31 @@
+type Query {
+    documents: [EditorialDocument]
+    editorialDocumentByUrl(url: String): [EditorialDocument]
+}
+
+type Mutation {
+    addEditorialDocument(editorialDocumentInput: EditorialDocumentInput!): EditorialDocumentInfo!
+    addEditorialDocumentWithScalars(text: String!, url: String!, publishedDate: String!): EditorialDocumentInfo!
+
+}
+
+type EditorialDocument {
+   id: ID
+   text: String!
+   url: String!
+   publishedDate: String
+}
+
+input EditorialDocumentInput {
+   text: String!
+   url: String!
+   publishedDate: String
+}
+
+
+type EditorialDocumentInfo{
+   id: ID
+   text: String!
+   url: String!
+   publishedDate: String
+}
