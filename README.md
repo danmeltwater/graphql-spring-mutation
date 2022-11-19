@@ -18,4 +18,3 @@ Java version : Java 17
 
 By default, the data.sql script executes before Hibernate initialization. 
 As we're relying on Hibernate to create table, we need to set `spring.jpa.defer-datasource-initialization=true`
-For production application think of using tools like Flyway or Liquibase.
